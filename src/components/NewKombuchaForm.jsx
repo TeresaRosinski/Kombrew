@@ -78,7 +78,7 @@ function NewKombuchaForm(props) {
       alcoholContent: event.target.alcoholContent.value,
       price: event.target.price.value,
       id: v4(), //this was missing
-      pints: 5, //Add pre-detemined quantity of pints to decrement
+      pints: 124, //Add pre-detemined quantity of pints to decrement
     });
   }
 }
