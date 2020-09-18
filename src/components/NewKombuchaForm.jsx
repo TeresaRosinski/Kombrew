@@ -12,19 +12,18 @@ function NewKombuchaForm(props) {
       />
     </React.Fragment>
   );
+  function handleNewKombuchaFormSubmission(event) {
+    event.preventDefault();
+    props.onNewKombuchaCreation({
+      name: event.target.name.value,
+      brand: event.target.brand.value,
+      flavor: event.target.flavor.value,
+      alcoholContent: event.target.alcoholContent.value,
+      price: event.target.price.value,
+      id: v4(), //this was missing
+      pints: 124, //Add pre-detemined quantity of pints to decrement
+    });
+  }
 }
-function handleNewKombuchaFormSubmission(event) {
-  event.preventDefault();
-  props.onNewKombuchaCreation({
-    name: event.target.name.value,
-    brand: event.target.brand.value,
-    flavor: event.target.flavor.value,
-    alcoholContent: event.target.alcoholContent.value,
-    price: event.target.price.value,
-    id: v4(), //this was missing
-    pints: 124, //Add pre-detemined quantity of pints to decrement
-  });
-}
-
 NewKombuchaForm.propTypes = { onNewKombuchaCreation: PropTypes.func };
 export default NewKombuchaForm;

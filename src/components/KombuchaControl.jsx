@@ -75,7 +75,8 @@ class KombuchaControl extends React.Component {
       currentlyVisibleState = (
         <KombuchaDetail
           kombucha={this.state.selectedKombucha}
-          onClickingDelete={this.handleDeletingPint}
+          onClickingDeletePint={this.handleDeletingPint}
+          onClickingDeleteKeg={this.handleDeletingKeg}
         />
       );
       buttonText = "Return to Kombucha List";

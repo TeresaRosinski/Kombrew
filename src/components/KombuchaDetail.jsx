@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import KombuchaList from "./KombuchaList";
 
 function KombuchaDetail(props) {
-  const { kombucha, onClickingDelete } = props;
+  const { kombucha, onClickingDeletePint, onClickingDeleteKeg } = props;
   return (
     <React.Fragment>
       <h2>Kombucha Details</h2>
@@ -13,15 +13,19 @@ function KombuchaDetail(props) {
       <h3>{kombucha.price}</h3>
       <h3>{kombucha.alcoholContent}</h3>
       <h3>{kombucha.pints}</h3>
-      <button onClick={() => onClickingDelete(kombucha.id)}>
+      <button onClick={() => onClickingDeletePint(kombucha.id)}>
         Drink a Pint
+      </button>
+      <button onClick={() => onClickingDeleteKeg(kombucha.id)}>
+        Delete this Keg
       </button>
     </React.Fragment>
   );
 }
 KombuchaDetail.propType = {
   kombucha: PropTypes.object,
-  onClickingDelete: PropTypes.func,
+  onClickingDeletePint: PropTypes.func,
+  onClickingDeleteKeg: PropTypes.func,
 };
 
 export default KombuchaDetail;

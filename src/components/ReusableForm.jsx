@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function ReusableForm(props) {
   return (
     <React.Fragment>
-      <form onSubmit={[props.formSubmissionHandler]}>
+      <form onSubmit={props.formSubmissionHandler}>
         <table>
           <tbody>
             <tr>
