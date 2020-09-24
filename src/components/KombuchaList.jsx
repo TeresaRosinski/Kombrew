@@ -15,7 +15,7 @@ function KombuchaList(props) {
           alcoholContent={kombucha.alcoholContent}
           price={kombucha.price}
           id={kombucha.id}
-          key={kombucha.key}
+          key={kombucha.id}
           pints={kombucha.pints}
         />
       ))}
